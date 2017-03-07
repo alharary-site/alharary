@@ -1,0 +1,19 @@
+---
+layout: page
+title: "Фотогалерея"
+permalink: /photos/
+---
+
+<div id="gallery">
+{% for image in site.static_files %}
+    {% if image.path contains '/photos/' %}
+        {% unless image.path contains '/thumbs/' %}
+            <div class="image-container" data-src="/assets/photos/{{image.name}}">
+                <div style="background-image: url('/assets/photos/thumbs/{{image.name}}');" class="gallery-image">
+                    <img src="/assets/photos/thumbs/{{image.name}}" style="display: none;">
+                </div>
+            </div>
+        {% endunless %}
+    {% endif %}
+{% endfor %}
+</div>

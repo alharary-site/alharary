@@ -55,6 +55,22 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
 
+{% if page.title == "Фотогалерея" %}
+  <script src="https://cdn.jsdelivr.net/g/lightgallery,lg-autoplay,lg-fullscreen,lg-hash,lg-pager,lg-share,lg-thumbnail,lg-video,lg-zoom"></script>
+  <!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+  <script type="text/javascript">
+      $(document).ready(function() {
+          $('#gallery').lightGallery({
+              thumbnail:true,
+              animateThumb: true,
+              showThumbByDefault: true
+          });
+      });
+  </script>
+{% endif %}
+
+
 <script type="text/javascript">
 $(document).ready(function() {
   // Default syntax highlighting
