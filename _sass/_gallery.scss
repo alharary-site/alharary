@@ -1,5 +1,9 @@
 #gallery {
-  width: 770px;
+  width: 100%;
+
+  @include media($mobile) {
+    width: 770px;
+  }
 
   .image-container {
     display: inline-block;
